@@ -104,7 +104,7 @@ public class HybridExecuteTest
 
 
 	@AfterMethod
-	public void screenshot(ITestResult result)
+	public void screenshot(ITestResult result) throws IOException
 	{
 		//	DateFormat format=new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 		//	Date date=new Date();
@@ -116,26 +116,49 @@ public class HybridExecuteTest
 			//		
 			try 
 			{
+				//				String methodname1=result.getName().toString().trim();
+				//				String methodname= result.getName()+ "-" + Arrays.toString(result.getParameters());
+				//	Utility.capturescreenshot(webdriver, methodname);
+
 				TakesScreenshot ts=(TakesScreenshot)webdriver;
 				File source=ts.getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(source, new File("./Screenshots/"+result.getName()+".png"));
+				String methodname1=result.getName().toString().trim();
+				String methodname= result.getName()+ "-" + Arrays.toString(result.getParameters());
 
-				System.out.println("Screenshot taken");
-				} 
+
+
+				FileUtils.copyFile(source, new File("./Screenshots/"+methodname+".png"));
+
+				System.out.println("Screenshot taken for pass test cases  ");
+			} 
 			catch (Exception e)
 			{
 
-			System.out.println("Exception while taking screenshot "+e.getMessage());
+				System.out.println("Exception while taking screenshot "+e.getMessage());
 			} 
 
-			}
 		}
+		
+		
+		else if (ITestResult.FAILURE==result.getStatus())	
+		{
+			TakesScreenshot ts=(TakesScreenshot)webdriver;
+			File source=ts.getScreenshotAs(OutputType.FILE);
+			String methodname1=result.getName().toString().trim();
+			String methodname= result.getName()+ "-" + Arrays.toString(result.getParameters());
+
+
+
+			FileUtils.copyFile(source, new File("./fail/"+methodname+".png"));
+
+			System.out.println("Screenshot taken for failed test cases ");
+		}
+		
+	}
+
+
 	
 
-		//String methodname1=result.getName().toString().trim();
-		//		String methodname= result.getName()+ "-" + Arrays.toString(result.getParameters());
-		//		Utility.capturescreenshot(webdriver, methodname);
-	
 }
 
 
