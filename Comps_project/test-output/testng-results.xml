@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="359" started-at="2017-06-13T10:10:54Z" finished-at="2017-06-13T10:10:55Z">
+  <suite name="Default suite" duration-ms="374" started-at="2017-06-13T10:24:06Z" finished-at="2017-06-13T10:24:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="359" started-at="2017-06-13T10:10:54Z" finished-at="2017-06-13T10:10:55Z">
+    <test name="Default test" duration-ms="374" started-at="2017-06-13T10:24:06Z" finished-at="2017-06-13T10:24:07Z">
       <class name="testcases.HybridExecuteTest">
-        <test-method status="SKIP" signature="testlogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HybridExecuteTest@9629756]" name="testlogin" duration-ms="0" started-at="2017-06-13T15:40:55Z" data-provider="hybridData" finished-at="2017-06-13T15:40:55Z">
+        <test-method status="SKIP" signature="testlogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HybridExecuteTest@9629756]" name="testlogin" duration-ms="0" started-at="2017-06-13T15:54:07Z" data-provider="hybridData" finished-at="2017-06-13T15:54:07Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>

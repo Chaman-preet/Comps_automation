@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>TestSteps.xlsx</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/Comps_workspace/Comps_project/TestSteps.xlsx</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
