@@ -21,5 +21,4 @@ public class Utility {
 			System.out.println("Exception while taking screenshot" +e.getMessage());
 		}
 	}
-
 }

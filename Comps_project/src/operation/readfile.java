@@ -14,7 +14,10 @@ import exportExcel.POIexcel;
 
 public class readfile {
 	
-	public void readxlsx(String path, String filename, String sheetname,String runmode) throws IOException
+	public String TestCase;
+ public String Description;
+ public String Runmode;
+	public void readxlsx(String path, String filename, String sheetname) throws IOException
 	{
 		ArrayList<String> list=new ArrayList<String>();
 		FileInputStream fs=new FileInputStream(path);
@@ -31,6 +34,9 @@ public class readfile {
 						String c=cell.getStringCellValue();
 				list.add(c);
 				} 
+			TestCase = sheet.getRow(0).getCell(0).getStringCellValue();
+		    Description = sheet.getRow(0).getCell(1).getStringCellValue();
+		    Runmode = sheet.getRow(0).getCell(2).getStringCellValue();
 			}
 	}
 }

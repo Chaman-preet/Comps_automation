@@ -40,7 +40,10 @@ public void download(Properties p,String operation,String objectname,String obje
 				System.out.println("Element is not present");}
 		break;
 	
-	
+	case "Gettext":
+		String pagecount = driver.findElement(this.getObject(p, objectname, objectType)).getAttribute("innerHTML");
+	System.out.println("Count is " +pagecount);
+	break;
 		default:
 			break;
 	}

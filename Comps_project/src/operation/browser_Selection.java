@@ -17,7 +17,7 @@ public class browser_Selection {
 		//create firefox instance
 			FirefoxProfile fp = new FirefoxProfile();
 			fp.setPreference("network.proxy.type", ProxyType.AUTODETECT.ordinal());
-			System.setProperty("webdriver.gecko.driver", "C://Users//chaman.preet//Downloads//geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\chaman.preet\\Downloads\\geckodriver.exe");
 			driver=new FirefoxDriver(fp);
 		}
 		//Check if parameter passed as 'chrome'
@@ -28,7 +28,7 @@ public class browser_Selection {
 			driver = new ChromeDriver();
 		}
 		//Check if parameter passed as 'Internetexplorer'
-				else if(browser.equalsIgnoreCase("Edge")){
+				else if(browser.equalsIgnoreCase("InternetExplorer")){
 					//set path to IE.exe
 					System.setProperty("webdriver.InternetExplorer.driver","C:\\Users\\chaman.preet\\Downloads\\IEDriverServer.exe");
 					//create Internetexplorer instance
